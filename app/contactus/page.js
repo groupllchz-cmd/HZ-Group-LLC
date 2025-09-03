@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 // import { Slide } from '../../components/Slide';
 import { Alert, Snackbar } from '@mui/material';
 import Contact from '@/components/Contact';
+import ContactBanner from '@/components/ContactBanner';
 
 const ContactUs = () => {
   const [snackbar, setSnackbar] = useState({
@@ -92,7 +93,7 @@ const ContactUs = () => {
         </Alert>
       </Snackbar>
 
-
+      <ContactBanner />
     </>
   );
 };

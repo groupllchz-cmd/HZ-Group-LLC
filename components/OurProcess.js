@@ -3,20 +3,26 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Star } from '@mui/icons-material';
+import Image from 'next/image';
 
-const CustomerReviews = ({
-    testimonials = [
+const OurProcess = ({
+    process = [
         {
-            text: "Working with HZ Group has been an absolute pleasure. They understood our requirements perfectly and delivered a top-notch software solution within the agreed timeline. Their team was highly professional, responsive, and attentive to our needs. We highly recommend their services.",
-            author: "William Doe",
-            rating: 5
+            heading: "Design",
+            svg: "/svg/design.svg",
+            text: "It all starts with our expert designers who unleash their creativity and passion to craft visually captivating designs that align with your brand identity and captivate your audience.",
         },
         {
-            text: "We approached HZ Group with a complex project, and they exceeded our expectations. Their technical expertise and attention to detail were impressive. They provided valuable insights and suggestions throughout the development process, resulting in a robust and user-friendly software solution.",
-            author: "Jon Jones",
-            rating: 5
+            heading: "Develop",
+            svg: "/svg/develop.svg",
+            text: "Our skilled developers bring those designs to life, leveraging cutting-edge technologies and coding practices to build robust and user-friendly digital solutions. But we don’t stop there."
         },
 
+        {
+            heading: "Elevate",
+            svg: "/svg/elevate.svg",
+            text: "We believe in elevating your brand to new heights by strategically positioning it in the market, implementing effective marketing strategies, and creating immersive experiences that leave a lasting impact."
+        }
     ]
 }) => {
     const containerVariants = {
@@ -102,13 +108,13 @@ const CustomerReviews = ({
                     className="title text-gray-800 mb-2 sm:mb-3 lg:mb-4"
                     variants={textVariants}
                 >
-                    Our Reviews
+                    Our Process
                 </motion.h2>
                 <motion.p
                     className="subtitle text-xs sm:text-sm md:text-base text-gray-600 tracking-wide"
                     variants={textVariants}
                 >
-                    Words from our satisfied clients: Hear what they have to say about our services.
+                    Transforming ideas into exceptional software solutions through innovation and expertise..
                 </motion.p>
             </motion.div>
 
@@ -116,11 +122,11 @@ const CustomerReviews = ({
                 className="max-w-7xl !mt-5 mx-auto"
                 variants={containerVariants}
             >
-                <div className="flex flex-row flex-wrap items-stretch justify-center gap-6 sm:gap-8 lg:gap-10 xl:gap-12">
-                    {testimonials.map((testimonial, index) => (
+                <div className="flex flex-row flex-wrap items-stretch justify-center gap-3 sm:gap-4 lg:gap-6 xl:gap-8">
+                    {process.map((p, index) => (
                         <motion.div
                             key={index}
-                            className="bg-white rounded-2xl p-6 sm:py-8 sm:px-10 w-full max-w-[500px] duration-300 border border-gray-100"
+                            className="bg-white rounded-2xl py-5  px-6 w-full max-w-[300px] duration-300 border border-gray-100"
                             variants={cardVariants}
                             whileHover={cardHover}
                             custom={index}
@@ -133,22 +139,25 @@ const CustomerReviews = ({
                                 viewport={{ once: true }}
                                 variants={containerVariants}
                             >
-                                {[...Array(testimonial.rating || 5)].map((_, starIndex) => (
-                                    <motion.div
-                                        key={starIndex}
-                                        variants={starVariants}
-                                        custom={starIndex}
-                                        transition={{ delay: 0.2 + starIndex * 0.1 }}
-                                    >
-                                        <Star
-                                            className="text-yellow-400 text-lg sm:text-xl"
-                                            fontSize="medium"
-                                        />
-                                    </motion.div>
-                                ))}
                             </motion.div>
+                            <Image
+                                src={p?.svg}
+                                alt="Facebook"
+                                width={80}
+                                height={50}
+                                className="transition-transform duration-300 transform mb-2 hover:scale-110 hover:drop-shadow-lg"
+                            />
 
                             {/* Review Text */}
+                            <motion.p
+                                className="text-sm sm:text-lg font-semibold text-[#0273cc] leading-relaxed mb-6 text-left"
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1 }}
+                                transition={{ delay: 0.4 + index * 0.1, duration: 0.6 }}
+                                viewport={{ once: true }}
+                            >
+                                {p?.heading}
+                            </motion.p>
                             <motion.p
                                 className="text-sm sm:text-base text-gray-700 leading-relaxed mb-6 text-left"
                                 initial={{ opacity: 0 }}
@@ -156,23 +165,11 @@ const CustomerReviews = ({
                                 transition={{ delay: 0.4 + index * 0.1, duration: 0.6 }}
                                 viewport={{ once: true }}
                             >
-                                {testimonial.text}
+                                {p?.text}
                             </motion.p>
 
                             {/* Author with Star Icon */}
-                            <motion.div
-                                className="flex items-center"
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ delay: 0.6 + index * 0.1, duration: 0.5 }}
-                                viewport={{ once: true }}
-                            >
-                                <motion.div
-                                    className="text-sm sm:text-base font-bold text-[#023f82]"
-                                >
-                                    {testimonial.author}
-                                </motion.div>
-                            </motion.div>
+
                         </motion.div>
                     ))}
                 </div>
@@ -181,4 +178,4 @@ const CustomerReviews = ({
     );
 };
 
-export default CustomerReviews;
+export default OurProcess;
