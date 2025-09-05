@@ -11,7 +11,7 @@ export const services = [
   },
   {
     id:2,
-    title: "Custom Web Development",
+    title: "Web Development",
     headline: "Build websites that perform",
     description: "Transforming your vision into stunning digital experiences through innovative website design. We specialize in building responsive, fast, and secure websites that engage users and drive conversions. From concept to launch, every aspect of the website is crafted with attention to detail, performance, and user experience.",
     icon: Web,

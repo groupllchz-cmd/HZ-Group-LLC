@@ -33,7 +33,7 @@ const Contact = ({ onSubmit }) => {
 
           <form onSubmit={onSubmit} className="space-y-6">
             <div>
-              <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Name*</label>
+              <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Name</label>
               <input
                 type="text"
                 id="name"
@@ -47,7 +47,7 @@ const Contact = ({ onSubmit }) => {
             </div>
 
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email*</label>
+              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email</label>
               <input
                 type="email"
                 id="email"
@@ -69,13 +69,13 @@ const Contact = ({ onSubmit }) => {
                 value={formData.message}
                 onChange={handleChange}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg  focus:border-transparent transition resize-none"
-                placeholder="Tell us about your travel needs..."
+                placeholder="Write your message here..."
               ></textarea>
             </div>
 
             <button
               type="submit"
-              className="w-full bg-[#001E80] text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-600 cursor-pointer transform transition-all duration-200 shadow-lg hover:shadow-xl"
+              className="w-full bg-[#001E80] text-white font-semibold py-3 px-6 rounded-lg hover:bg-[rgb(14,52,178)] cursor-pointer transform transition-all duration-200 shadow-lg hover:shadow-xl"
             >
               SEND MESSAGE
             </button>
