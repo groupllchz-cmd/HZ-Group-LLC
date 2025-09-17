@@ -3,15 +3,16 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { LinkedIn } from "@mui/icons-material";
 
 const Footer = () => {
   return (
     <footer className="bg-black text-gray-300 py-8 px-4 md:px-16 shadow-lg">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-4 gap-2">
 
         {/* Quick Links */}
         <div className="space-y-4">
-          <h2 className="text-md md:text-sm pl-4 py-4 lg:text-md font-semibold text-white">
+          <h2 className="text-md md:text-sm pl-2 py-4 lg:text-md font-semibold text-white">
             Quick Links
           </h2>
           <ul className="grid gap-2 pt-2 text-md md:text-sm lg:text-md">
@@ -69,23 +70,36 @@ const Footer = () => {
               <br />
               <div className="mt-2 space-y-1">
                 <div>
-                  <a href="tel:+922135804268" className="hover:text-[#023f82] transition-colors">
-                    +9221-35804268
+                  <a href="tel:+923353316418" className="hover:text-[#023f82] transition-colors">
+                    +92-335-3316418
                   </a>
                 </div>
+
                 <div>
-                  <a href="tel:+922135894268" className="hover:text-[#023f82] transition-colors">
-                    +9221-35894268
-                  </a>
-                </div>
-                <div>
-                  <a href="tel:+922137220480" className="hover:text-[#023f82] transition-colors">
-                    +9221-37220480
-                  </a>
-                </div>
-                <div>
-                  <a href="https://wa.me/923333204268" className="hover:text-[#023f82] transition-colors" target="_blank" rel="noopener noreferrer">
+                  <a href="https://wa.me/+923333204268" className="hover:text-[#023f82] transition-colors" target="_blank" rel="noopener noreferrer">
                     +92-333-3204268
+                  </a>
+                </div>
+              </div>
+            </address>
+          </div>
+        </div>
+        <div className="space-y-4">
+          {/* <h2 className="text-md md:text-sm py-4 lg:text-md font-semibold text-white">
+            Our Location
+          </h2> */}
+          <div className="text-md pt-[73px] md:text-sm lg:text-md">
+            <address className="not-italic">
+              7820 Donington Park Drive,
+              <br />
+              Cumming, GA 30040,
+              <br />
+              USA
+              <br />
+              <div className="mt-2 space-y-1">
+                <div>
+                  <a href="tel:+1913568-8097" className="hover:text-[#023f82] transition-colors">
+                    +1 (913) 568-8097
                   </a>
                 </div>
               </div>
@@ -95,10 +109,10 @@ const Footer = () => {
 
         {/* Social Media Links */}
         <div>
-          <h2 className="text-md md:text-sm lg:text-md font-semibold text-white">
+          <h2 className="text-md md:text-sm mt-3 lg:text-md font-semibold text-white">
             Follow Us
           </h2>
-          <div className="flex pt-2 space-x-4">
+          <div className="flex pt-8 space-x-4">
             <a
               href="https://www.facebook.com"
               className="group"
@@ -115,7 +129,7 @@ const Footer = () => {
             </a>
 
             <a
-              href="https://wa.me/923333204268"
+              href="https://wa.me/+923333204268"
               className="group"
               target="_blank"
               rel="noopener noreferrer"
@@ -138,9 +152,28 @@ const Footer = () => {
               <Image
                 src="/svg/instagram.svg"
                 alt="Instagram"
-                width={24}
-                height={24}
+                width={20}
+                height={20}
                 className="transition-transform duration-300 transform hover:scale-110 hover:drop-shadow-lg mt-[2px]"
+              />
+            </a>
+
+            <a
+              href="https://www.linkedin.com"
+              className="group"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <LinkedIn
+                sx={{
+                  fontSize: 26,
+                  transition: 'transform 0.3s, filter 0.3s',
+                  color: 'gray',
+                  '&:hover': {
+                    transform: 'scale(1.1)',
+                    filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.2))',
+                  },
+                }}
               />
             </a>
           </div>

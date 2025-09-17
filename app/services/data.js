@@ -1,13 +1,14 @@
 // data/services.js
-import { Palette, Web, Phone, TrendingUp, Brush, PlayCircle } from '@mui/icons-material';
-
+import { 
+  Palette, Web, Phone, TrendingUp, Brush, PlayCircle, 
+  Cloud, Security, Code, MobileFriendly, SportsEsports, School 
+} from '@mui/icons-material';
 
 export const services = [
   {
     title: "Database Services",
     headline: "Robust, Secure, and High-Performance Database Management",
-    description:
-      "Your data is your most critical asset. Our comprehensive database services ensure it is stored, managed, and protected by best-in-class technologies and expertise. We manage the entire database lifecycle, from strategic planning and architecture design to daily administration and proactive optimization. We specialize in complex, high-availability environments, ensuring your mission-critical applications have uninterrupted access to data, 24/7.",
+    description: "Your data is your most critical asset. Our comprehensive database services ensure it is stored, managed, and protected by best-in-class technologies and expertise. We manage the entire database lifecycle, from strategic planning and architecture design to daily administration and proactive optimization. We specialize in complex, high-availability environments, ensuring your mission-critical applications have uninterrupted access to data, 24/7.",
     keyFeatures: [
       "End-to-End Lifecycle Management: Design, installation, configuration, migrations, and version upgrades for Oracle, PostgreSQL, MySQL, and more.",
       "High Availability & Disaster Recovery: Expert implementation of Oracle RAC, Data Guard, and GoldenGate for replication and failover, minimizing downtime to seconds.",
@@ -27,8 +28,7 @@ export const services = [
   {
     title: "Infrastructure Services",
     headline: "Building the Resilient Foundation for Your Digital Enterprise",
-    description:
-      "A powerful, reliable, and scalable IT infrastructure is the backbone of every successful modern business. Our infrastructure services are designed to modernize and optimize your entire IT ecosystem, from on-premises data centers to hybrid cloud environments. We focus on building resilient, efficient, and automated foundations that support your applications and drive business growth.",
+    description: "A powerful, reliable, and scalable IT infrastructure is the backbone of every successful modern business. Our infrastructure services are designed to modernize and optimize your entire IT ecosystem, from on-premises data centers to hybrid cloud environments. We focus on building resilient, efficient, and automated foundations that support your applications and drive business growth.",
     keyFeatures: [
       "Server & Storage Solutions: Design, implementation, and management of physical and virtualized server environments (VMware, Hyper-V) and storage arrays (SAN/NAS).",
       "High Availability Clustering: Configuration of failover clusters for critical services and applications to ensure continuous availability.",
@@ -48,8 +48,7 @@ export const services = [
   {
     title: "Middleware Services",
     headline: "Seamless Integration and Unshakeable Application Foundations",
-    description:
-      "Middleware is the critical glue that connects your applications, data, and users. Our expertise ensures this layer is robust, secure, and highly available. We provide full lifecycle management for enterprise middleware platforms, enabling seamless communication between software components and ensuring your business applications perform flawlessly under any load.",
+    description: "Middleware is the critical glue that connects your applications, data, and users. Our expertise ensures this layer is robust, secure, and highly available. We provide full lifecycle management for enterprise middleware platforms, enabling seamless communication between software components and ensuring your business applications perform flawlessly under any load.",
     keyFeatures: [
       "Enterprise Platform Expertise: Installation, configuration, and clustering for Oracle WebLogic, IBM WebSphere, Apache Tomcat, and more.",
       "High-Availability Architectures: Design and deployment of active-active and active-passive clusters to eliminate single points of failure.",
@@ -69,8 +68,7 @@ export const services = [
   {
     title: "Cloud Services",
     headline: "Accelerate Innovation with Strategic Cloud Adoption",
-    description:
-      "Navigate your cloud journey with a partner that simplifies complexity and maximizes value. We provide strategic guidance and hands-on expertise to help you design, migrate, and manage workloads across public (AWS, Azure, GCP), private, and hybrid clouds. Our goal is to create a cloud environment that is not only cost-effective and secure but also a catalyst for innovation and agility.",
+    description: "Navigate your cloud journey with a partner that simplifies complexity and maximizes value. We provide strategic guidance and hands-on expertise to help you design, migrate, and manage workloads across public (AWS, Azure, GCP), private, and hybrid clouds. Our goal is to create a cloud environment that is not only cost-effective and secure but also a catalyst for innovation and agility.",
     keyFeatures: [
       "Cloud Strategy & Assessment: TCO analysis, workload suitability assessment, and roadmap development for your cloud adoption.",
       "Migration & Modernization: Lift-and-shift, refactoring, and re-architecting of applications for the cloud using proven methodologies.",
@@ -85,13 +83,12 @@ export const services = [
       "Teams wanting to adopt DevOps and build using cloud-native technologies.",
     ],
     whyChooseUs: "We are cloud-agnostic. We provide unbiased advice tailored to your specific technical and business needs, ensuring you choose the right platform and architecture without vendor lock-in.",
-    icon: TrendingUp,
+    icon: Cloud,
   },
   {
     title: "Concierge Services",
     headline: "Your Dedicated Team of Experts, On Demand",
-    description:
-      "More than just support, our Concierge Service is your strategic IT partner. We provide white-glove, expert-level attention for your most critical environments. This proactive partnership offers peace of mind through continuous oversight, immediate response, and strategic guidance, ensuring your systems are always performing at their peak.",
+    description: "More than just support, our Concierge Service is your strategic IT partner. We provide white-glove, expert-level attention for your most critical environments. This proactive partnership offers peace of mind through continuous oversight, immediate response, and strategic guidance, ensuring your systems are always performing at their peak.",
     keyFeatures: [
       "Proactive 24/7/365 Monitoring: Advanced monitoring of your database, middleware, and infrastructure with tailored alerting.",
       "Rapid Response Contingency: Immediate intervention and resolution for critical P1/P2 incidents to minimize business impact.",
@@ -111,8 +108,7 @@ export const services = [
   {
     title: "Stress Test Services",
     headline: "Validate Performance, Ensure Resilience, Plan for Growth",
-    description:
-      "Don't wait for a traffic spike to reveal your system's weaknesses. Our rigorous stress and load testing services simulate real-world and extreme conditions to uncover hidden bottlenecks, validate scalability, and ensure a flawless user experience. We provide you with the data and insights needed to make confident decisions about your infrastructure and application architecture.",
+    description: "Don't wait for a traffic spike to reveal your system's weaknesses. Our rigorous stress and load testing services simulate real-world and extreme conditions to uncover hidden bottlenecks, validate scalability, and ensure a flawless user experience. We provide you with the data and insights needed to make confident decisions about your infrastructure and application architecture.",
     keyFeatures: [
       "Real-World Scenario Modeling: Design and execution of tests that mimic actual user behavior and traffic patterns, not just synthetic loads.",
       "Bottleneck Identification: Pinpointing exact constraints in CPU, memory, disk I/O, network latency, and application code.",
@@ -132,8 +128,7 @@ export const services = [
   {
     title: "Corporate Trainings",
     headline: "Upskill Your Team with World-Class Technical Expertise",
-    description:
-      "Invest in your most valuable asset: your people. Our expert-led corporate training programs are designed to equip your technical teams with the deep, practical knowledge they need to excel. We offer a curriculum developed and delivered by seasoned industry practitioners, focusing on real-world scenarios and hands-on labs that ensure knowledge transfer and immediate ROI.",
+    description: "Invest in your most valuable asset: your people. Our expert-led corporate training programs are designed to equip your technical teams with the deep, practical knowledge they need to excel. We offer a curriculum developed and delivered by seasoned industry practitioners, focusing on real-world scenarios and hands-on labs that ensure knowledge transfer and immediate ROI.",
     keyFeatures: [
       "Wide Curriculum: Courses on Oracle DBA, PostgreSQL/MySQL Administration, GoldenGate, Performance Tuning, Cloud Migration, and DevOps.",
       "Flexible Delivery Formats: On-site, virtual instructor-led, or on-demand training to suit your team's schedule and location.",
@@ -148,13 +143,13 @@ export const services = [
       "Teams preparing for a major project (e.g., a migration) that requires new skills.",
     ],
     whyChooseUs: "Our trainers are active consultants who face real-world technical challenges daily. They bring this invaluable frontline experience into the classroom, teaching not just the 'how' but the 'why' behind best practices.",
+    icon: School,
     image: "/images/corporate-trainings.png",
   },
   {
     title: "DevOps & Cloud-Native Engineering",
     headline: "Automate, Accelerate, and Innovate Your Software Delivery",
-    description:
-      "Transform your development and operations lifecycle with modern DevOps and cloud-native practices. We help you break down silos, automate workflows, and build scalable, resilient systems on modern infrastructure. Our full-stack approach enables you to deliver software faster, more reliably, and with greater security, giving you a significant competitive advantage.",
+    description: "Transform your development and operations lifecycle with modern DevOps and cloud-native practices. We help you break down silos, automate workflows, and build scalable, resilient systems on modern infrastructure. Our full-stack approach enables you to deliver software faster, more reliably, and with greater security, giving you a significant competitive advantage.",
     keyFeatures: [
       "End-to-End CI/CD Pipelines: Automation of build, test, security scan, and deployment processes using tools like Jenkins, GitLab CI, and GitHub Actions.",
       "Containerization & Orchestration: Adoption of Docker and Kubernetes for building, deploying, and managing scalable microservices architectures.",
@@ -169,13 +164,13 @@ export const services = [
       "Teams aiming to improve system reliability and mean time to recovery (MTTR).",
     ],
     whyChooseUs: "We combine culture, process, and tooling. We don't just implement tools; we help foster a collaborative DevOps culture and design automated processes that are tailored to your organization's specific maturity level and goals.",
+    icon: Code,
     image: "/images/devops-cloud.png",
   },
   {
     title: "Secure Software Development & Audit",
     headline: "Build Security In, Don't Bolt It On",
-    description:
-      "In today's threat landscape, security cannot be an afterthought. Our services integrate security seamlessly into every phase of your Software Development Lifecycle (SDLC). We help you build secure applications from the ground up, perform rigorous audits of existing code, and ensure ongoing compliance, protecting your brand and your users.",
+    description: "In today's threat landscape, security cannot be an afterthought. Our services integrate security seamlessly into every phase of your Software Development Lifecycle (SDLC). We help you build secure applications from the ground up, perform rigorous audits of existing code, and ensure ongoing compliance, protecting your brand and your users.",
     keyFeatures: [
       "Secure SDLC Framework: Integrating security practices (threat modeling, SAST, DAST) into requirements, design, development, and testing phases.",
       "Static & Dynamic Application Testing (SAST/DAST): Automated and manual code analysis to identify vulnerabilities like SQL injection, XSS, and misconfigurations.",
@@ -190,13 +185,12 @@ export const services = [
       "Teams that have experienced security incidents and want to prevent recurrence.",
     ],
     whyChooseUs: "Our auditors are also developers. We find vulnerabilities and, more importantly, provide actionable, developer-friendly remediation guidance to fix them effectively and prevent them from reoccurring.",
-
+    icon: Security,
   },
   {
     title: "AI Services",
     headline: "Transform Your Business with Intelligent Automation",
-    description:
-      "Unlock new opportunities for efficiency, insight, and customer engagement with practical artificial intelligence. We cut through the hype to deliver AI solutions that solve real business problems. From intelligent chatbots to predictive analytics, we guide you from initial concept to production-ready deployment, ensuring your AI initiatives are ethical, governed, and deliver measurable ROI.",
+    description: "Unlock new opportunities for efficiency, insight, and customer engagement with practical artificial intelligence. We cut through the hype to deliver AI solutions that solve real business problems. From intelligent chatbots to predictive analytics, we guide you from initial concept to production-ready deployment, ensuring your AI initiatives are ethical, governed, and deliver measurable ROI.",
     keyFeatures: [
       "AI Strategy & Use Case Identification: Identifying high-impact business problems that can be solved with AI and machine learning.",
       "Custom AI Solution Development: Building NLP chatbots, computer vision systems, recommendation engines, and generative AI integrations.",
@@ -211,13 +205,12 @@ export const services = [
       "Teams with a proof-of-concept that needs to be scaled to a robust production system.",
     ],
     whyChooseUs: "We focus on the 'why' and the 'how'. We help you identify the most valuable use cases for your business and then build the end-to-end data and model pipelines required to deploy them reliably and responsibly into production.",
-
+    icon: TrendingUp,
   },
   {
     title: "Web Development",
     headline: "Design, Build, and Scale High-Impact Digital Experiences",
-    description:
-      "Your website is your digital storefront. We create fast, secure, and visually stunning web experiences that captivate your audience and drive conversions. Using modern frameworks and a user-centric design approach, we build responsive, SEO-optimized websites, e-commerce platforms, and complex web applications that perform flawlessly across all devices and browsers.",
+    description: "Your website is your digital storefront. We create fast, secure, and visually stunning web experiences that captivate your audience and drive conversions. Using modern frameworks and a user-centric design approach, we build responsive, SEO-optimized websites, e-commerce platforms, and complex web applications that perform flawlessly across all devices and browsers.",
     keyFeatures: [
       "Modern Frontend Development: Building responsive and interactive UIs with React, Vue.js, Angular, and Next.js.",
       "Robust Backend Development: Creating scalable APIs and server-side logic with Node.js, Python (Django/Flask), PHP (Laravel), and Java.",
@@ -232,9 +225,9 @@ export const services = [
       "Companies requiring a complex web application for internal or customer use.",
     ],
     whyChooseUs: "We blend art and engineering. Our teams combine creative UI/UX design with robust, scalable architecture to create websites that are not only beautiful and engaging but also technically superior and built for growth.",
-
+    icon: Web,
   },
-  {
+   {
     title: "App Development",
     headline: "Engineered for Engagement: Powerful Native & Cross-Platform Apps",
     description:
@@ -274,5 +267,6 @@ export const services = [
       "Studios with an existing game that needs to be ported to another platform or remastered.",
     ],
     whyChooseUs: "We are gamers and technologists. We combine creative passion with technical mastery to build games that are not only fun and engaging but are also technically optimized for performance and scalability across target platforms.",
+    icon: MobileFriendly
   },
-];
+]

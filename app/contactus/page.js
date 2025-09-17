@@ -42,7 +42,7 @@ const ContactUs = () => {
       return;
     }
 
-    formData.append("access_key", "549fe924-49f6-471f-9e6a-e70c117c16bb");
+    formData.append("access_key", "c1ed6070-2c8e-4637-9713-2d090b935f44");
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {

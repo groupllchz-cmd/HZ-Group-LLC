@@ -4,6 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { services } from '@/app/services/data';
 import Link from 'next/link';
+import { Palette } from '@mui/icons-material';
 
 const containerVariants = {
     hidden: { opacity: 0 },
@@ -76,6 +77,8 @@ const iconVariants = {
 };
 
 
+
+
 const Services = () => {
     return (
         <motion.div
@@ -109,16 +112,17 @@ const Services = () => {
             >
                 <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8">
                     {services.map((service, index) => {
-                        const IconComponent = service.icon;
+                        const IconComponent = service.icon || Palette;
 
                         return (
                             <Link key={index} href={`/services/${index}`}>
                                 <motion.div
                                     key={index}
                                     className={`
-        relative rounded-3xl p-8 sm:p-10 transition-all duration-300 cursor-pointer
-        bg-[#eaeefe] text-white
-      `}
+          relative rounded-3xl p-8 sm:p-10 transition-all duration-300 cursor-pointer
+          bg-[#eaeefe] text-white 
+          h-full flex flex-col
+        `}
                                     variants={cardVariants}
                                     whileHover={cardHover}
                                     custom={index}
@@ -126,9 +130,9 @@ const Services = () => {
                                     {/* Icon */}
                                     <motion.div
                                         className="
-          w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center mb-6
-          bg-white shadow-md
-        "
+            w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center mb-6
+            bg-white shadow-md flex-shrink-0
+          "
                                         variants={iconVariants}
                                         initial="hidden"
                                         whileInView="visible"
@@ -138,46 +142,48 @@ const Services = () => {
                                         <IconComponent sx={{ fontSize: { xs: 28, sm: 48 }, color: "#001E80" }} className="text-3xl sm:text-9xl text-[#001E80]" />
                                     </motion.div>
 
-                                    {/* Title */}
-                                    <motion.h3
-                                        className="text-xl sm:text-2xl font-bold mb-3 text-gray-800"
-                                        initial={{ opacity: 0 }}
-                                        whileInView={{ opacity: 1 }}
-                                        transition={{ delay: 0.3 + index * 0.1, duration: 0.6 }}
-                                        viewport={{ once: true }}
-                                    >
-                                        {service.title}
-                                    </motion.h3>
-
-                                    {/* Headline */}
-                                    <motion.p
-                                        className="text-sm sm:text-base font-medium text-gray-600"
-                                        initial={{ opacity: 0 }}
-                                        whileInView={{ opacity: 1 }}
-                                        transition={{ delay: 0.4 + index * 0.1, duration: 0.6 }}
-                                        viewport={{ once: true }}
-                                    >
-                                        {service.headline}
-                                    </motion.p>
-
-                                    {/* Learn More Button */}
-                                    <motion.div
-                                        className="mt-6"
-                                        initial={{ opacity: 0, y: 10 }}
-                                        whileInView={{ opacity: 1, y: 0 }}
-                                        transition={{ delay: 0.5 + index * 0.1, duration: 0.5 }}
-                                        viewport={{ once: true }}
-                                    >
-                                        <div
-                                            className="
-            inline-block text-sm font-semibold border-b-2 cursor-pointer transition-all duration-300
-            text-[#001E80] border-[#001E80] hover:border-[#000c40] hover:text-[#000c40]
-          "
+                                    {/* Content Container - grows to fill space */}
+                                    <div className="flex-grow flex flex-col">
+                                        {/* Title */}
+                                        <motion.h3
+                                            className="text-xl sm:text-2xl font-bold mb-3 text-gray-800"
+                                            initial={{ opacity: 0 }}
+                                            whileInView={{ opacity: 1 }}
+                                            transition={{ delay: 0.3 + index * 0.1, duration: 0.6 }}
+                                            viewport={{ once: true }}
                                         >
-                                            Learn More
-                                        </div>
-                                    </motion.div>
+                                            {service.title}
+                                        </motion.h3>
 
+                                        {/* Headline - grows to fill available space */}
+                                        <motion.p
+                                            className="text-sm sm:text-base font-medium text-gray-600 flex-grow mb-6"
+                                            initial={{ opacity: 0 }}
+                                            whileInView={{ opacity: 1 }}
+                                            transition={{ delay: 0.4 + index * 0.1, duration: 0.6 }}
+                                            viewport={{ once: true }}
+                                        >
+                                            {service.headline}
+                                        </motion.p>
+
+                                        {/* Learn More Button - stays at bottom */}
+                                        <motion.div
+                                            className="mt-auto"
+                                            initial={{ opacity: 0, y: 10 }}
+                                            whileInView={{ opacity: 1, y: 0 }}
+                                            transition={{ delay: 0.5 + index * 0.1, duration: 0.5 }}
+                                            viewport={{ once: true }}
+                                        >
+                                            <div
+                                                className="
+                inline-block text-sm font-semibold border-b-2 cursor-pointer transition-all duration-300
+                text-[#001E80] border-[#001E80] hover:border-[#000c40] hover:text-[#000c40]
+              "
+                                            >
+                                                Learn More
+                                            </div>
+                                        </motion.div>
+                                    </div>
                                 </motion.div>
                             </Link>
                         );
