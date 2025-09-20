@@ -1,7 +1,8 @@
 // data/services.js
 import { 
   Palette, Web, Phone, TrendingUp, Brush, PlayCircle, 
-  Cloud, Security, Code, MobileFriendly, SportsEsports, School 
+  Cloud, Security, Code, MobileFriendly, SportsEsports, School,
+   GroupWork,  AutoAwesome, RocketLaunch,  Shield, CloudQueue 
 } from '@mui/icons-material';
 
 export const services = [
@@ -268,5 +269,148 @@ export const services = [
     ],
     whyChooseUs: "We are gamers and technologists. We combine creative passion with technical mastery to build games that are not only fun and engaging but are also technically optimized for performance and scalability across target platforms.",
     icon: MobileFriendly
+  },
+  {
+    title: "Enterprise AI Agent Development",
+    headline: "Custom Multi-Agent Workflows for Complex Business Processes",
+    description:
+      "Deploy sophisticated AI agents that collaborate seamlessly to automate your most complex business processes. From customer service to data analysis, our agents work together using advanced protocols for secure, standardized communication.",
+    keyFeatures: [
+      "Custom Multi-Agent Workflows: Design and deployment of agents that coordinate tasks intelligently.",
+      "Advanced Protocols: Secure, standardized communication between agents for reliable execution.",
+      "Business Process Automation: Automating customer service, data processing, and operational workflows.",
+      "Scalability: Support for enterprise-wide deployments across multiple systems and use cases.",
+    ],
+    idealFor: [
+      "Organizations with complex workflows requiring intelligent orchestration.",
+      "Businesses seeking advanced automation beyond simple task bots.",
+      "Enterprises needing secure and scalable AI-driven solutions.",
+    ],
+    whyChooseUs:
+      "We specialize in building enterprise-grade AI agents that adapt, collaborate, and integrate seamlessly into your existing ecosystem, ensuring measurable business impact.",
+    icon: GroupWork,
+  },
+  {
+    title: "Secure Agent Infrastructure",
+    headline: "Enterprise-Grade Security for Trustworthy AI Operations",
+    description:
+      "Build trust in your AI operations with our robust security framework. Every agent interaction is authenticated, authorized, and audited through our secure agent gateway.",
+    keyFeatures: [
+      "Authentication & Authorization: Scoped permissions for each agent, tool, or context.",
+      "Audit Trail & Logging: Full visibility into every agent action with detailed logs.",
+      "Enterprise-Grade Security: Protecting sensitive data and workflows from unauthorized access.",
+      "Agent Gateway: Centralized control point for secure communication and monitoring.",
+    ],
+    idealFor: [
+      "Companies in regulated industries (finance, healthcare, government).",
+      "Businesses requiring strict auditing and compliance for AI operations.",
+      "Organizations needing a secure foundation for mission-critical AI deployments.",
+    ],
+    whyChooseUs:
+      "Security is baked into our AI architecture, ensuring compliance, trust, and resilience at scale.",
+    icon: Security,
+  },
+  {
+    title: "Intelligent Process Automation",
+    headline: "Transform Manual Workflows with Adaptive AI Agents",
+    description:
+      "Replace repetitive, manual tasks with intelligent agents that continuously learn and optimize. Our process automation integrates seamlessly with your systems and provides unprecedented efficiency gains.",
+    keyFeatures: [
+      "Event-Driven Execution: Trigger agents via events, APIs, webhooks, or scheduled jobs.",
+      "Adaptive Learning: Agents improve workflows over time with machine learning feedback loops.",
+      "System Integration: Connect seamlessly to databases, APIs, filesystems, and legacy systems.",
+      "Scalable Automation: Expand from small workflows to enterprise-wide automation initiatives.",
+    ],
+    idealFor: [
+      "Businesses bogged down by repetitive manual processes.",
+      "Enterprises seeking end-to-end workflow automation.",
+      "IT teams needing adaptive automation that integrates with legacy and modern systems.",
+    ],
+    whyChooseUs:
+      "We deliver automation that goes beyond scripts and bots — intelligent agents that adapt and scale with your business needs.",
+    icon: AutoAwesome,
+  },
+  {
+    title: "Knowledge Agents (RAG & Internal Assistants)",
+    headline: "Centralize Knowledge Access with AI-Powered Assistants",
+    description:
+      "Unify your documents, SOPs, and organizational knowledge into a chat-based interface powered by Retrieval-Augmented Generation (RAG) agents. Empower your workforce with instant, intelligent access to critical information.",
+    keyFeatures: [
+      "Unified Knowledge Base: Centralize SOPs, compliance docs, policies, and internal resources.",
+      "RAG Agents: Retrieval-Augmented Generation for precise, context-aware responses.",
+      "Use Cases: SOP lookups, compliance assistance, onboarding, and customer support.",
+      "Scalable Access: Enable knowledge-sharing across departments and teams.",
+    ],
+    idealFor: [
+      "Organizations with siloed knowledge and scattered documentation.",
+      "Support teams needing instant access to policies and SOPs.",
+      "Companies aiming to accelerate onboarding and training.",
+    ],
+    whyChooseUs:
+      "Our knowledge agents turn your internal documents into an intelligent assistant, ensuring your team always has the right answer at the right time.",
+    icon: School,
+  },
+  {
+    title: "Quick Deployment",
+    headline: "From Concept to Deployment in Weeks",
+    description:
+      "We provide a structured, rapid approach to deploying AI agents — from understanding your unique requirements to delivering production-ready solutions with ongoing support.",
+    keyFeatures: [
+      "Discovery Call: Understand your unique automation needs.",
+      "Proof of Concept: Build and test a focused solution.",
+      "Development & Integration: Full-scale implementation into your environment.",
+      "Launch & Support: Go live with continuous monitoring and optimization.",
+    ],
+    idealFor: [
+      "Businesses exploring AI automation for the first time.",
+      "Enterprises looking for fast yet reliable AI deployment.",
+      "Companies that need expert guidance throughout their AI journey.",
+    ],
+    whyChooseUs:
+      "Our step-by-step process ensures you achieve value quickly while minimizing risks and maximizing ROI from your AI investments.",
+    icon: RocketLaunch,
+  },
+   {
+    title: "Generative AI & Cybersecurity",
+    headline: "AI Adoption, Responsible Governance, and Evolving Security Threats",
+    description:
+      "Generative AI and cybersecurity are reshaping enterprise priorities. While GenAI adoption grows rapidly, enterprises face challenges in governance, compliance, and responsible deployment. At the same time, cybersecurity risks such as ransomware and AI-powered attacks push organizations toward Zero Trust and AI-driven defense strategies.",
+    keyFeatures: [
+      "Generative AI Adoption: 70% of enterprises experimenting, 20% in production for tasks like content creation, coding assistance, and customer support.",
+      "Responsible AI Frameworks: Governance required to mitigate risks like hallucinations, data leakage, compliance issues, and intellectual property concerns.",
+      "Cyber Threat Landscape: Ransomware, supply chain vulnerabilities, and insider threats remain top enterprise risks.",
+      "Zero Trust Models: By 2025, most organizations will adopt partial or full Zero Trust architectures to limit attack surfaces.",
+      "AI in Security: Attackers use GenAI for deepfakes and spear-phishing, while defenders counter with AI-driven SOC automation and anomaly detection."
+    ],
+    idealFor: [
+      "Enterprises scaling GenAI responsibly across operations.",
+      "Organizations in highly regulated sectors prioritizing compliance and security.",
+      "Businesses seeking advanced, AI-enabled cybersecurity resilience."
+    ],
+    whyChooseUs:
+      "We help enterprises unlock the power of GenAI while building trust, governance, and resilience against evolving cyber threats.",
+    icon: Shield,
+  },
+  {
+    title: "Cloud, Infrastructure & IT Spending",
+    headline: "Hybrid Cloud Strategies, AI Infrastructure, and Budget Priorities",
+    description:
+      "Cloud and infrastructure priorities are evolving with the surge of AI workloads. Hybrid and multi-cloud strategies dominate, sustainability is a board-level concern, and enterprises are shifting IT budgets to prioritize AI, cybersecurity, and modernization. CIOs face growing pressure to balance resilience, cost-efficiency, and rapid innovation.",
+    keyFeatures: [
+      "Hybrid & Multi-Cloud: Enterprises diversify across providers to avoid lock-in and increase resilience.",
+      "AI Infrastructure Demand: Explosive need for GPUs, TPUs, and accelerators to support GenAI workloads.",
+      "Sustainability & Green IT: Cloud providers compete on renewable-powered data centers and energy efficiency.",
+      "IT Budget Growth: Average ~6% increase in 2025 despite economic uncertainties.",
+      "Spending Shifts: Budgets moving from pilots to production-grade AI, automation, and cybersecurity investments.",
+      "ROI Pressure: CIOs prioritize projects with measurable efficiency gains over long-term speculative initiatives."
+    ],
+    idealFor: [
+      "Businesses modernizing infrastructure for AI and automation.",
+      "Organizations adopting hybrid or multi-cloud to increase flexibility.",
+      "CIOs managing IT budgets under cost, compliance, and innovation pressures."
+    ],
+    whyChooseUs:
+      "We enable enterprises to optimize cloud strategies, scale AI infrastructure, and maximize returns on IT spending with secure, sustainable, future-ready solutions.",
+    icon: CloudQueue,
   },
 ]

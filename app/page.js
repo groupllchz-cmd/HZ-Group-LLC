@@ -3,6 +3,7 @@ import ContactBanner from "@/components/ContactBanner";
 import CustomerReviews from "@/components/CustomerReviews";
 import Hero from "@/components/Hero";
 import OurProcess from "@/components/OurProcess";
+import OurStory from "@/components/OurStory";
 import Services from "@/components/Services";
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
       />
       <Services/>
       <About />
+      <OurStory/>
       <OurProcess />
       <CustomerReviews />
       <ContactBanner />
