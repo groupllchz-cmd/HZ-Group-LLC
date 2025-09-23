@@ -114,7 +114,7 @@ const Footer = () => {
           </h2>
           <div className="flex pt-8 space-x-4">
             <a
-              href="https://www.facebook.com"
+              href="https://www.facebook.com/profile.php?id=61581212489161"
               className="group"
               target="_blank"
               rel="noopener noreferrer"
@@ -144,7 +144,7 @@ const Footer = () => {
             </a>
 
             <a
-              href="https://www.instagram.com"
+              href="https://www.instagram.com/hz_group_llc?utm_source=qr&igsh=ZjV4dnAyOHFwMDky"
               className="group"
               target="_blank"
               rel="noopener noreferrer"
@@ -159,7 +159,7 @@ const Footer = () => {
             </a>
 
             <a
-              href="https://www.linkedin.com"
+              href="https://www.linkedin.com/company/hz-group-llc/"
               className="group"
               target="_blank"
               rel="noopener noreferrer"
