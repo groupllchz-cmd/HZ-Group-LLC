@@ -11,23 +11,8 @@ const containerVariants = {
     visible: {
         opacity: 1,
         transition: {
-            duration: 0.6,
-            staggerChildren: 0.2
-        }
-    }
-};
-
-const textVariants = {
-    hidden: {
-        opacity: 0,
-        y: 30
-    },
-    visible: {
-        opacity: 1,
-        y: 0,
-        transition: {
-            duration: 0.8,
-            ease: "easeOut"
+            duration: 0.3,
+            staggerChildren: 0.1 
         }
     }
 };
@@ -35,49 +20,26 @@ const textVariants = {
 const cardVariants = {
     hidden: {
         opacity: 0,
-        y: 50,
-        scale: 0.9
+        y: 20 // Reduced movement
     },
     visible: {
         opacity: 1,
         y: 0,
-        scale: 1,
         transition: {
-            duration: 0.6,
+            duration: 0.4, // Faster animation
             ease: "easeOut"
         }
     }
 };
+
 
 const cardHover = {
-    scale: 1.02,
-    y: -5,
+    y: -2,
     transition: {
-        duration: 0.2,
-        ease: "easeInOut"
+        duration: 0.15,
+        ease: "easeOut"
     }
 };
-
-
-const iconVariants = {
-    hidden: {
-        opacity: 0,
-        scale: 0,
-        rotate: -15
-    },
-    visible: {
-        opacity: 1,
-        scale: 1,
-        rotate: 0,
-        transition: {
-            duration: 0.5,
-            ease: "easeOut"
-        }
-    }
-};
-
-
-
 
 const Services = () => {
     return (
@@ -86,26 +48,25 @@ const Services = () => {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.1 }} // Reduced threshold
         >
+            {/* Header with simple fade-in */}
             <motion.div
                 className="text-center mb-8 sm:mb-10 lg:mb-12"
-                variants={textVariants}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4 }}
+                viewport={{ once: true }}
             >
-                <motion.h2
-                    className="title text-gray-800 mb-2 sm:mb-3 lg:mb-4"
-                    variants={textVariants}
-                >
+                <h2 className="title text-gray-800 mb-2 sm:mb-3 lg:mb-4">
                     Our Services
-                </motion.h2>
-                <motion.p
-                    className="subtitle text-xs sm:text-sm md:text-base text-gray-600 tracking-wide"
-                    variants={textVariants}
-                >
+                </h2>
+                <p className="subtitle text-xs sm:text-sm md:text-base text-gray-600 tracking-wide">
                     We are committed to ensuring the successful delivery of software solutions
-                </motion.p>
+                </p>
             </motion.div>
 
+            {/* Cards Grid */}
             <motion.div
                 className="max-w-7xl mt-5 mx-auto"
                 variants={containerVariants}
@@ -117,78 +78,52 @@ const Services = () => {
                         return (
                             <Link key={index} href={`/services/${index}`}>
                                 <motion.div
-                                    key={index}
                                     className={`
-          relative rounded-3xl p-8 sm:p-10 transition-all duration-300 cursor-pointer
-          bg-[#eaeefe] text-white 
-          h-full flex flex-col
-        `}
+                                        relative rounded-3xl p-8 sm:p-10 transition-colors duration-200 cursor-pointer
+                                        bg-[#eaeefe] text-white 
+                                        h-full flex flex-col
+                                        hover:bg-[#dddcfd]
+                                    `}
                                     variants={cardVariants}
                                     whileHover={cardHover}
-                                    custom={index}
                                 >
-                                    {/* Icon */}
-                                    <motion.div
-                                        className="
-            w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center mb-6
-            bg-white shadow-md flex-shrink-0
-          "
-                                        variants={iconVariants}
-                                        initial="hidden"
-                                        whileInView="visible"
-                                        transition={{ delay: 0.2 + index * 0.1 }}
-                                        viewport={{ once: true }}
-                                    >
-                                        <IconComponent sx={{ fontSize: { xs: 28, sm: 48 }, color: "#001E80" }} className="text-3xl sm:text-9xl text-[#001E80]" />
-                                    </motion.div>
+                                    {/* Icon - No complex animations */}
+                                    <div className="
+                                        w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center mb-6
+                                        bg-white shadow-md flex-shrink-0
+                                    ">
+                                        <IconComponent 
+                                            sx={{ fontSize: { xs: 28, sm: 48 }, color: "#001E80" }} 
+                                            className="text-3xl sm:text-9xl text-[#001E80]" 
+                                        />
+                                    </div>
 
-                                    {/* Content Container - grows to fill space */}
+                                    {/* Content Container */}
                                     <div className="flex-grow flex flex-col">
                                         {/* Title */}
-                                        <motion.h3
-                                            className="text-xl sm:text-2xl font-bold mb-3 text-gray-800"
-                                            initial={{ opacity: 0 }}
-                                            whileInView={{ opacity: 1 }}
-                                            transition={{ delay: 0.3 + index * 0.1, duration: 0.6 }}
-                                            viewport={{ once: true }}
-                                        >
+                                        <h3 className="text-xl sm:text-2xl font-bold mb-3 text-gray-800">
                                             {service.title}
-                                        </motion.h3>
+                                        </h3>
 
-                                        {/* Headline - grows to fill available space */}
-                                        <motion.p
-                                            className="text-sm sm:text-base font-medium text-gray-600 flex-grow mb-6"
-                                            initial={{ opacity: 0 }}
-                                            whileInView={{ opacity: 1 }}
-                                            transition={{ delay: 0.4 + index * 0.1, duration: 0.6 }}
-                                            viewport={{ once: true }}
-                                        >
+                                        {/* Headline */}
+                                        <p className="text-sm sm:text-base font-medium text-gray-600 flex-grow mb-6">
                                             {service.headline}
-                                        </motion.p>
+                                        </p>
 
-                                        {/* Learn More Button - stays at bottom */}
-                                        <motion.div
-                                            className="mt-auto"
-                                            initial={{ opacity: 0, y: 10 }}
-                                            whileInView={{ opacity: 1, y: 0 }}
-                                            transition={{ delay: 0.5 + index * 0.1, duration: 0.5 }}
-                                            viewport={{ once: true }}
-                                        >
-                                            <div
-                                                className="
-                inline-block text-sm font-semibold border-b-2 cursor-pointer transition-all duration-300
-                text-[#001E80] border-[#001E80] hover:border-[#000c40] hover:text-[#000c40]
-              "
-                                            >
+                                        {/* Learn More Button */}
+                                        <div className="mt-auto">
+                                            <div className="
+                                                inline-block text-sm font-semibold border-b-2 cursor-pointer transition-all duration-200
+                                                text-[#001E80] border-[#001E80] hover:border-[#000c40] hover:text-[#000c40]
+                                            ">
                                                 Learn More
                                             </div>
-                                        </motion.div>
+                                        </div>
                                     </div>
                                 </motion.div>
                             </Link>
                         );
                     })}
-
                 </div>
             </motion.div>
         </motion.div>
