@@ -32,12 +32,15 @@ export const metadata = {
     "Game Development",
     "Corporate Trainings",
   ],
+  verification: {
+    google: "google6ede5e98a4318505.html",
+  },
   authors: [{ name: "HZ Group LLC" }],
   openGraph: {
     title: "HZ Group LLC",
     description:
       "Your trusted partner for managed IT services, cloud solutions, AI integration, DevOps, and custom software development.",
-    // url: "https://www.hzgroup.com", //replace with actual domain
+    url: "https://hzgroupllc.com/",
     siteName: "HZ Group LLC",
     images: [
       {
@@ -50,13 +53,6 @@ export const metadata = {
     locale: "en_US",
     type: "website",
   },
-  // twitter: {
-  //   card: "summary_large_image",
-  //   title: "HZ Group LLC | Technology & IT Solutions",
-  //   description:
-  //     "Innovating with AI, cloud, DevOps, web, app, and game development. Empowering businesses with secure, scalable IT solutions.",
-  //   images: ["/images/og-default.png"],
-  // },
 };
 
 
