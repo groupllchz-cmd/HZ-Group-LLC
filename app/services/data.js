@@ -25,7 +25,7 @@ export const services = [
     ],
     whyChooseUs: "Businesses in Cumming and nearby areas rely on Hz Group LLC because we consistently deliver reliable and high-performance database solutions engineered specifically to their requirements. Our personnel is devoted to offering excellent service, ensuring your data is accessible, secured, and operating at peak ability at all times.",
     icon: Palette,
-    url:"Url: https://hzgroupllc.com/services/database-management-cumming/"
+    url:"https://hzgroupllc.com/services/database-management-cumming"
   },
   {
     title: "Infrastructure Services",
