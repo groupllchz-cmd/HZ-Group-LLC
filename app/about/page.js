@@ -16,7 +16,6 @@ const page = () => {
         title="About Us"
         description="We are HZ Group LLC, a trusted partner in technology innovation. Our mission is to empower businesses with cutting-edge software development, custom web solutions, and comprehensive IT consulting services that drive digital transformation and sustainable growth."
         showButton={false}
-        </Hero>
       />
       <About />
       <ContactBanner />
