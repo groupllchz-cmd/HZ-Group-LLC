@@ -2,7 +2,7 @@
 import { 
   Palette, Web, Phone, TrendingUp, Brush, PlayCircle, 
   Cloud, Security, Code, MobileFriendly, SportsEsports, School,
-   GroupWork,  AutoAwesome, RocketLaunch,  Shield, CloudQueue 
+   GroupWork,  AutoAwesome, RocketLaunch,  Shield, CloudQueue, Storage 
 } from '@mui/icons-material';
 
 export const services = [
@@ -47,7 +47,7 @@ export const services = [
     "Growing companies planning scalable infrastructure to support expansion."
   ],
   whyChooseUs: "HZ Group LLC combines local Cumming, GA expertise with enterprise-level capabilities. We take a vendor-agnostic, holistic approach to infrastructure—designing integrated systems that are proactive, secure, scalable, and aligned with your business objectives. Our focus is not just on technology components, but on building resilient digital foundations that drive measurable business success.",
-  icon: Server,
+  icon: Storage,
 },
   {
   title: "Middleware Services in Cumming, GA",
